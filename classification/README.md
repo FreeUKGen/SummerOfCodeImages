@@ -34,7 +34,7 @@ python train.py <path of directory with images> <path of csv file>
 
 For example:
 ```
-python train.py classification/images/freecen classification/data/gold/combined_classifications_20180227.csv
+python train.py images/freecen data/gold/combined_classifications_20180227.csv
 ```
 
 ### Optimization

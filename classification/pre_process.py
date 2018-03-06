@@ -20,7 +20,6 @@ def proc(img):
     new_img = img[y_:y_+h_,x_:x_+w_]
     new_img = cv2.cvtColor(new_img, cv2.COLOR_GRAY2BGR)
     img = cv2.resize(new_img,(430,250))
-    cv2.imwrite("img.jpg", new_img)
     img=np.array(img)
     return img
 
@@ -33,7 +32,7 @@ def read_im(path):
 def train_data(im_dir, src_file):
     img_list= []
     labels_list= []
-    with open('file.csv', 'r') as f:
+    with open(src_file, 'r') as f:
         reader = csv.reader(f)
         for line in tqdm(reader):
             img_list.append(read_im(os.path.join(im_dir,line[0])))
